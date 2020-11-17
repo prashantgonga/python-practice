@@ -7,3 +7,18 @@ You should use input to read a string and float() to convert the string to a num
 Do not worry about error checking the user input unless you want to - you can assume the user types numbers properly. 
 Do not name your variable sum or use the sum() function.
 '''
+
+def computepay(hours, rate) :
+    if hours > 40 :
+        pay = (hours * rate) # Normal Pay
+        otp = (hours - 40) * (rate * 0.5)
+        payout = pay + otp
+    else : 
+        payout = (hours * rate)
+    return payout
+
+hours = float(input('Enter Hours: '))
+rate = float(input('Enter Rate: '))
+
+salary = (computepay(hours, rate))
+print('Pay', salary)
